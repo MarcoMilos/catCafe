@@ -405,3 +405,34 @@ document.querySelectorAll('.truck-button-4').forEach(button => {
 document.getElementById("btRegreso").onclick = function() {
     location.href = "productos-Usuario.html";
 };
+
+document.getElementById("btCarrito").onclick = function() {
+    location.href = "verCarrito-Usuario.html";
+};
+
+const products = [
+    { id: 'food', name: 'Alimento Premium para Gatos Adultos', price: 450, image: 'images/comidaGato.png' },
+    { id: 'collar', name: 'Collar con GPS integrado', price: 1000, image: 'images/collarGato.png' },
+    { id: 'toy', name: 'Ratón interactivo inteligente', price: 320, image: 'images/ratonGato.png' },
+    { id: 'sweater', name: 'Suéter de lana para Gato', price: 380, image: 'images/sueterGato.png' }
+  ];
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    products.forEach(product => {
+      document.getElementById(`add-to-cart-${product.id}`).addEventListener('click', () => addToCart(product));
+    });
+  });
+  
+  function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let found = cart.find(p => p.id === product.id);
+    
+    if (found) {
+      found.quantity++;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+  
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${product.name} ha sido añadido al carrito.`);
+  }

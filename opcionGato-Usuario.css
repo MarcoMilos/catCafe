@@ -2,7 +2,7 @@
     color: black;
     text-align-last: center;
     top: 100px;
-    right: -400px;
+    right: -480px;
     font-size: 70px;
     font-family: 'Lilita One', sans-serif;
     text-shadow: 2px 2px 5px whitesmoke;
@@ -71,7 +71,7 @@
     text-align: center;
     position: relative;
     top: 600px;
-    right: 840px;
+    right: 940px;
     border: none;
     outline: none;
     color: var(--color);
@@ -353,7 +353,7 @@
     text-align: center;
     position: relative;
     top: 600px;
-    right: 610px;
+    right: 710px;
     border: none;
     outline: none;
     color: var(--color);
@@ -635,7 +635,7 @@
     text-align: center;
     position: relative;
     top: 600px;
-    right: 380px;
+    right: 490px;
     border: none;
     outline: none;
     color: var(--color);
@@ -917,7 +917,7 @@
     text-align: center;
     position: relative;
     top: 600px;
-    right: 150px;
+    right: 260px;
     border: none;
     outline: none;
     color: var(--color);
@@ -1143,6 +1143,44 @@
     background: #eceffc;
   }
 
+  #btCarrito {
+    padding: 0.8em 1.8em;
+	border-radius: 8px;
+	background-color: transparent;
+	color: black;
+	border:2px solid black;
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 1;
+	transition: 0.3s;
+	overflow:hidden ;
+	position: relative;
+    top: 100px;
+    right: -270px;
+}
+
+#btCarrito:before {
+    content:'';
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: 0.5s ease;
+	transform: translate(-50%,-50%) rotate(45deg);
+	display: block;
+	z-index: -1;
+	background-color: black;
+}
+
+#btCarrito:hover::before {
+    width: 105%;
+}
+
+#btCarrito:hover {
+    color: whitesmoke;
+}
+
 #btRegreso {
     padding: 0.8em 1.8em;
 	border-radius: 8px;
@@ -1156,7 +1194,7 @@
 	overflow:hidden ;
 	position: relative;
     top: 100px;
-    right: 1350px;
+    right: 450px;
 }
 
 #btRegreso:before {
