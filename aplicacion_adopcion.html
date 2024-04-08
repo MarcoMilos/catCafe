@@ -5,22 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miaw Cat Café - Solicitud de Adopción</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="aplicacion_adopcion.css">
+
+    <link rel="icon" type="image/x-icon" href="imgs/logoMiaw.png">
+
+    <!-- Fuente Lilita One Static -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="catalogo_gatos.html">Miaw Cat Café</a>
-    </nav>
-    <div class="container mt-5">
-        <div class="d-flex justify-content-between">
-            <h2>Solicitud de Adopción</h2>
-            <a href="catalogo_gatos.html" class="btn btn-info"><- Regresar al Catálogo</a>
+    <div class="container-fluid p-0">
+        <div class="bg-image"></div>
+        <div class="content">
+            <h1 class="col">Solicitud de <br>Adopción</h1>
+            <button id="btRegreso">Return</button>
+                <script>
+                    document.getElementById("btRegreso").onclick = function() {
+                        location.href = "catalogo_gatos.html";
+                    };
+                </script>
+            <img id="logo" src="imgs/logoMiaw.png" class="float-right">
         </div>
+    </div>
+    <div class="container mt-5">
         <form action="submit_application.php" method="post">
-            <div class="form-group">
+            <div class="form-group" id="Nombre">
                 <label for="nombre">Nombre</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required-placeholder="Nombre">
             </div>
-            <div class="form-group">
+            <div class="form-group" id="Email">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" name="email" required-placeholder="Email">
             </div>
