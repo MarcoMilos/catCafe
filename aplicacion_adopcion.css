@@ -90,10 +90,45 @@ h1 {
     color: whitesmoke;
 }
 
-#Nombre {
-    color: whitesmoke;
+label {
+    display: block;
+    margin: 10px 0 5px;
 }
 
-#Email {
+input[type="text"],
+input[type="numero"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+.error {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+}
+
+#Nombre,
+#Edad,
+#Direccion,
+#Ocupacion,
+#Email,
+#Tel,
+#Nombre_Gato,
+#Casa,
+#Si,
+#No {
     color: whitesmoke;
 }

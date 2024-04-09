@@ -31,17 +31,49 @@
     </div>
     <div class="container mt-5">
         <form action="submit_application.php" method="post">
-            <div class="form-group" id="Nombre">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required-placeholder="Nombre">
-            </div>
-            <div class="form-group" id="Email">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required-placeholder="Email">
-            </div>
-            <!-- Repetimos para solicitar otros datos al usuario -->
+            <section class="personal-info">
+                <label for="nombre" id="Nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <span class="error-message"></span>
+
+                <label for="edad" id="Edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+                <span class="error-message"></span>
+
+                <label for="direccion" id="Direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                <span class="error-message"></span>
+
+                <label for="ocupacion" id="Ocupacion">Ocupación:</label>
+                <input type="text" id="ocupacion" name="ocupacion" required>
+                <span class="error-message"></span>
+
+                <label for="email" id="Email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message"></span>
+
+                <label for="telcasa-cel" id="Tel">Teléfono de casa/celular:</label>
+                <input type="tel" id="telcasa-cel" name="telcasa-cel" required>
+                <span class="error-message"></span>
+            </section>
+
+            <section class="adoption-form">
+                <label for="nombre-gato" id="Nombre_Gato">Nombre del gato que desea adoptar:</label>
+                <input type="text" id="nombre-gato" name="nombre-gato">
+                <span class="error-message"></span>
+
+                <label id="Casa">¿Tiene casa/departamento propio?</label>
+                <label for="casa-propia-si" id="Si">Sí</label>
+                <input type="radio" id="casa-propia-si" name="casa-propia" value="si" required>
+                <span class="error-message"></span>
+                <label for="casa-propia-no" id="No">No</label>
+                <input type="radio" id="casa-propia-no" name="casa-propia" value="no" required>
+                <span class="error-message"></span>
+                <!-- Resto de preguntas -->
+            </section>
             <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
