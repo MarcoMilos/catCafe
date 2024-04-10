@@ -1,6 +1,21 @@
 body{
   font-family: 'Lilita One', sans-serif;
   margin: 0;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+body::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(5px);
+  z-index: -1;
 }
 .container{
   width: 900px;
@@ -134,4 +149,10 @@ body.showCart .container{
 }
 .listCart::-webkit-scrollbar{
   width: 0;
+}
+#logo {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 200px;
 }
