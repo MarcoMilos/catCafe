@@ -50,7 +50,7 @@ body, html {
 	overflow:hidden ;
 	position: relative;
     top: -900px;
-    right: -700px;
+    right: -600px;
 }
 
 #btRegreso:before {
