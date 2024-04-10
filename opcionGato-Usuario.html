@@ -2,113 +2,56 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miaw CatCafe - Cafeteria Gatuna</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-
-        <!-- jQuery library (Libreria de Java)-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-
-        <!-- Popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    
     <link rel="stylesheet" href="opcionGato-Usuario.css">
 
-    <link rel="icon" type="image/x-icon" href="logoMiaw.png">
+    <link rel="icon" type="image/x-icon" href="images/logoMiaw.png">
 
         <!-- Fuente "lilita One Static" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 
-        <!-- Fuente "monserrat" -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+      <!-- Fuente "monserrat" -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1 id="h1-Gatos" class="col">Productos para Gatos</h1>
-    <img id="logo" src="images/logoMiaw.png" class="float-right">
-    <button id="btRegreso">Return</button>
-    <button id="btCarrito">Ver Carrito</button>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
-        <script src="opcionGato-Usuario.js"></script>
-    <div id="product-container">
-        <img id="comidaGato" src="images/comidaGato.png">
-        <h3 id="comidaGatos-txt">Alimento Premium para<br>Gatos Adultos</h3>
-        <p id="p-1">$450 MXN por<br>bolsa de 2kg</p>
-        <button class="truck-button-1">
-            <span class="default">Add to cart</span>
-            <span class="success">
-                Added to cart
-                <svg viewbox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                </svg>
-            </span>
-            <div class="truck">
-                <div class="wheel"></div>
-                <div class="back"></div>
-                <div class="front"></div>
-                <div class="box"></div>
+<body class="">
+    
+    <div class="container">
+        <header>
+            <div class="title">PRODUCTOS PARA GATOS</div>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>  
+                <span>0</span>
             </div>
-        </button>
-        <img id="collarGato" src="images/collarGato.png">
-        <h3 id="collarGato-txt">Collar con GPS<br>integrado</h3>
-        <p id="p-2">$1,000 MXN</p>
-        <button class="truck-button-2">
-            <span class="default">Add to cart</span>
-            <span class="success">
-                Added to cart
-                <svg viewbox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                </svg>
-            </span>
-            <div class="truck">
-                <div class="wheel"></div>
-                <div class="back"></div>
-                <div class="front"></div>
-                <div class="box"></div>
+        </header>
+
+        <div class="listProduct">
+            <div class="item">
+                <img src="images/collarGato.png">
+                <h2>NOMBRE PRODUCTO</h2>
+                <div class="price">$1000 MXN</div>
+                <button class="addCart">Agregar al carrito</button>
             </div>
-        </button>
-        <img id="ratonGato" src="images/ratonGato.png">
-        <h3 id="ratonGato-txt">Ratón interactivo<br>inteligente</h3>
-        <p id="p-3">$320 MXN</p>
-        <button class="truck-button-3">
-            <span class="default">Add to cart</span>
-            <span class="success">
-                Added to cart
-                <svg viewbox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                </svg>
-            </span>
-            <div class="truck">
-                <div class="wheel"></div>
-                <div class="back"></div>
-                <div class="front"></div>
-                <div class="box"></div>
-            </div>
-        </button>
-        <img id="sueterGato" src="images/sueterGato.png">
-        <h3 id="sueterGato-txt">Suéter de lana<br>para Gato</h3>
-        <p id="p-4">$380 MXN</p>
-        <button class="truck-button-4">
-            <span class="default">Add to cart</span>
-            <span class="success">
-                Added to cart
-                <svg viewbox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                </svg>
-            </span>
-            <div class="truck">
-                <div class="wheel"></div>
-                <div class="back"></div>
-                <div class="front"></div>
-                <div class="box"></div>
-            </div>
-        </button>
+        </div>
     </div>
+
+    <div class="cartTab">
+        <h1>Carrito de compras</h1>
+        <div class="listCart">
+            
+        </div>
+        <div class="btn">
+            <button class="close">CERRAR</button>
+            <button class="checkout">PAGAR</button>
+        </div>
+    </div>
+
+    <script src="opcionGato-Usuario.js"></script>
 </body>
 </html>

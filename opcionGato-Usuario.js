@@ -1,438 +1,141 @@
-document.querySelectorAll('.truck-button-1').forEach(button => {
-    button.addEventListener('click', e => {
+let iconCart = document.querySelector('.icon-cart');
+let closeCart = document.querySelector('.close');
+let body = document.querySelector('body');
+let listProductHTML = document.querySelector('.listProduct');
+let listCartHTML = document.querySelector('.listCart');
+let iconCartSpan = document.querySelector('.icon-cart span');
 
-        e.preventDefault();
-        
-        let box = button.querySelector('.box'),
-            truck = button.querySelector('.truck');
-        
-        if(!button.classList.contains('done')) {
-            
-            if(!button.classList.contains('animation')) {
+let listProducts = [];
+let carts = [];
 
-                button.classList.add('animation');
+iconCart.addEventListener('click', () => {
+    body.classList.toggle('showCart')
+})
+closeCart.addEventListener('click', () => {
+    body.classList.toggle('showCart')
+})
 
-                gsap.to(button, {
-                    '--box-s': 1,
-                    '--box-o': 1,
-                    duration: .3,
-                    delay: .5
-                });
-
-                gsap.to(box, {
-                    x: 0,
-                    duration: .4,
-                    delay: .7
-                });
-
-                gsap.to(button, {
-                    '--hx': -5,
-                    '--bx': 50,
-                    duration: .18,
-                    delay: .92
-                });
-
-                gsap.to(box, {
-                    y: 0,
-                    duration: .1,
-                    delay: 1.15
-                });
-
-                gsap.set(button, {
-                    '--truck-y': 0,
-                    '--truck-y-n': -26
-                });
-
-                gsap.to(button, {
-                    '--truck-y': 1,
-                    '--truck-y-n': -25,
-                    duration: .2,
-                    delay: 1.25,
-                    onComplete() {
-                        gsap.timeline({
-                            onComplete() {
-                                button.classList.add('done');
-                            }
-                        }).to(truck, {
-                            x: 0,
-                            duration: .4
-                        }).to(truck, {
-                            x: 40,
-                            duration: 1
-                        }).to(truck, {
-                            x: 20,
-                            duration: .6
-                        }).to(truck, {
-                            x: 96,
-                            duration: .4
-                        });
-                        gsap.to(button, {
-                            '--progress': 1,
-                            duration: 2.4,
-                            ease: "power2.in"
-                        });
-                    }
-                });
-                
-            }
-            
-        } else {
-            button.classList.remove('animation', 'done');
-            gsap.set(truck, {
-                x: 4
-            });
-            gsap.set(button, {
-                '--progress': 0,
-                '--hx': 0,
-                '--bx': 0,
-                '--box-s': .5,
-                '--box-o': 0,
-                '--truck-y': 0,
-                '--truck-y-n': -26
-            });
-            gsap.set(box, {
-                x: -24,
-                y: -6
-            });
-        }
-
-    });
-});
-
-document.querySelectorAll('.truck-button-2').forEach(button => {
-    button.addEventListener('click', e => {
-
-        e.preventDefault();
-        
-        let box = button.querySelector('.box'),
-            truck = button.querySelector('.truck');
-        
-        if(!button.classList.contains('done')) {
-            
-            if(!button.classList.contains('animation')) {
-
-                button.classList.add('animation');
-
-                gsap.to(button, {
-                    '--box-s': 1,
-                    '--box-o': 1,
-                    duration: .3,
-                    delay: .5
-                });
-
-                gsap.to(box, {
-                    x: 0,
-                    duration: .4,
-                    delay: .7
-                });
-
-                gsap.to(button, {
-                    '--hx': -5,
-                    '--bx': 50,
-                    duration: .18,
-                    delay: .92
-                });
-
-                gsap.to(box, {
-                    y: 0,
-                    duration: .1,
-                    delay: 1.15
-                });
-
-                gsap.set(button, {
-                    '--truck-y': 0,
-                    '--truck-y-n': -26
-                });
-
-                gsap.to(button, {
-                    '--truck-y': 1,
-                    '--truck-y-n': -25,
-                    duration: .2,
-                    delay: 1.25,
-                    onComplete() {
-                        gsap.timeline({
-                            onComplete() {
-                                button.classList.add('done');
-                            }
-                        }).to(truck, {
-                            x: 0,
-                            duration: .4
-                        }).to(truck, {
-                            x: 40,
-                            duration: 1
-                        }).to(truck, {
-                            x: 20,
-                            duration: .6
-                        }).to(truck, {
-                            x: 96,
-                            duration: .4
-                        });
-                        gsap.to(button, {
-                            '--progress': 1,
-                            duration: 2.4,
-                            ease: "power2.in"
-                        });
-                    }
-                });
-                
-            }
-            
-        } else {
-            button.classList.remove('animation', 'done');
-            gsap.set(truck, {
-                x: 4
-            });
-            gsap.set(button, {
-                '--progress': 0,
-                '--hx': 0,
-                '--bx': 0,
-                '--box-s': .5,
-                '--box-o': 0,
-                '--truck-y': 0,
-                '--truck-y-n': -26
-            });
-            gsap.set(box, {
-                x: -24,
-                y: -6
-            });
-        }
-
-    });
-});
-
-document.querySelectorAll('.truck-button-3').forEach(button => {
-    button.addEventListener('click', e => {
-
-        e.preventDefault();
-        
-        let box = button.querySelector('.box'),
-            truck = button.querySelector('.truck');
-        
-        if(!button.classList.contains('done')) {
-            
-            if(!button.classList.contains('animation')) {
-
-                button.classList.add('animation');
-
-                gsap.to(button, {
-                    '--box-s': 1,
-                    '--box-o': 1,
-                    duration: .3,
-                    delay: .5
-                });
-
-                gsap.to(box, {
-                    x: 0,
-                    duration: .4,
-                    delay: .7
-                });
-
-                gsap.to(button, {
-                    '--hx': -5,
-                    '--bx': 50,
-                    duration: .18,
-                    delay: .92
-                });
-
-                gsap.to(box, {
-                    y: 0,
-                    duration: .1,
-                    delay: 1.15
-                });
-
-                gsap.set(button, {
-                    '--truck-y': 0,
-                    '--truck-y-n': -26
-                });
-
-                gsap.to(button, {
-                    '--truck-y': 1,
-                    '--truck-y-n': -25,
-                    duration: .2,
-                    delay: 1.25,
-                    onComplete() {
-                        gsap.timeline({
-                            onComplete() {
-                                button.classList.add('done');
-                            }
-                        }).to(truck, {
-                            x: 0,
-                            duration: .4
-                        }).to(truck, {
-                            x: 40,
-                            duration: 1
-                        }).to(truck, {
-                            x: 20,
-                            duration: .6
-                        }).to(truck, {
-                            x: 96,
-                            duration: .4
-                        });
-                        gsap.to(button, {
-                            '--progress': 1,
-                            duration: 2.4,
-                            ease: "power2.in"
-                        });
-                    }
-                });
-                
-            }
-            
-        } else {
-            button.classList.remove('animation', 'done');
-            gsap.set(truck, {
-                x: 4
-            });
-            gsap.set(button, {
-                '--progress': 0,
-                '--hx': 0,
-                '--bx': 0,
-                '--box-s': .5,
-                '--box-o': 0,
-                '--truck-y': 0,
-                '--truck-y-n': -26
-            });
-            gsap.set(box, {
-                x: -24,
-                y: -6
-            });
-        }
-
-    });
-});
-
-document.querySelectorAll('.truck-button-4').forEach(button => {
-    button.addEventListener('click', e => {
-
-        e.preventDefault();
-        
-        let box = button.querySelector('.box'),
-            truck = button.querySelector('.truck');
-        
-        if(!button.classList.contains('done')) {
-            
-            if(!button.classList.contains('animation')) {
-
-                button.classList.add('animation');
-
-                gsap.to(button, {
-                    '--box-s': 1,
-                    '--box-o': 1,
-                    duration: .3,
-                    delay: .5
-                });
-
-                gsap.to(box, {
-                    x: 0,
-                    duration: .4,
-                    delay: .7
-                });
-
-                gsap.to(button, {
-                    '--hx': -5,
-                    '--bx': 50,
-                    duration: .18,
-                    delay: .92
-                });
-
-                gsap.to(box, {
-                    y: 0,
-                    duration: .1,
-                    delay: 1.15
-                });
-
-                gsap.set(button, {
-                    '--truck-y': 0,
-                    '--truck-y-n': -26
-                });
-
-                gsap.to(button, {
-                    '--truck-y': 1,
-                    '--truck-y-n': -25,
-                    duration: .2,
-                    delay: 1.25,
-                    onComplete() {
-                        gsap.timeline({
-                            onComplete() {
-                                button.classList.add('done');
-                            }
-                        }).to(truck, {
-                            x: 0,
-                            duration: .4
-                        }).to(truck, {
-                            x: 40,
-                            duration: 1
-                        }).to(truck, {
-                            x: 20,
-                            duration: .6
-                        }).to(truck, {
-                            x: 96,
-                            duration: .4
-                        });
-                        gsap.to(button, {
-                            '--progress': 1,
-                            duration: 2.4,
-                            ease: "power2.in"
-                        });
-                    }
-                });
-                
-            }
-            
-        } else {
-            button.classList.remove('animation', 'done');
-            gsap.set(truck, {
-                x: 4
-            });
-            gsap.set(button, {
-                '--progress': 0,
-                '--hx': 0,
-                '--bx': 0,
-                '--box-s': .5,
-                '--box-o': 0,
-                '--truck-y': 0,
-                '--truck-y-n': -26
-            });
-            gsap.set(box, {
-                x: -24,
-                y: -6
-            });
-        }
-
-    });
-});
-
-document.getElementById("btRegreso").onclick = function() {
-    location.href = "productos-Usuario.html";
-};
-
-document.getElementById("btCarrito").onclick = function() {
-    location.href = "verCarrito-Usuario.html";
-};
-
-const products = [
-    { id: 'food', name: 'Alimento Premium para Gatos Adultos', price: 450, image: 'images/comidaGato.png' },
-    { id: 'collar', name: 'Collar con GPS integrado', price: 1000, image: 'images/collarGato.png' },
-    { id: 'toy', name: 'Ratón interactivo inteligente', price: 320, image: 'images/ratonGato.png' },
-    { id: 'sweater', name: 'Suéter de lana para Gato', price: 380, image: 'images/sueterGato.png' }
-  ];
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    products.forEach(product => {
-      document.getElementById(`add-to-cart-${product.id}`).addEventListener('click', () => addToCart(product));
-    });
-  });
-  
-  function addToCart(product) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let found = cart.find(p => p.id === product.id);
-    
-    if (found) {
-      found.quantity++;
-    } else {
-      cart.push({ ...product, quantity: 1 });
+const addDataToHTML = () => {
+    listProductHTML.innerHTML = '';
+    if(listProducts.length > 0){
+        listProducts.forEach(product => {
+            let newProduct = document.createElement('div');
+            newProduct.classList.add('item');
+            newProduct.dataset.id = product.id;
+            newProduct.innerHTML = `
+                <img src="${product.image}">
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price} MXN</div>
+                <button class="addCart">Agregar al carrito</button>`;
+            listProductHTML.appendChild(newProduct);
+        })
     }
-  
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${product.name} ha sido añadido al carrito.`);
-  }
+}
+listProductHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    if(positionClick.classList.contains('addCart')){
+        let product_id = positionClick.parentElement.dataset.id;
+        addToCart(product_id);
+    }
+})
+
+const addToCart = (product_id) => {
+    let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
+    if(carts.length <= 0){
+        carts = [{
+            product_id: product_id,
+            quantity: 1
+        }]
+    }else if(positionThisProductInCart < 0){
+        carts.push({
+            product_id: product_id,
+            quantity: 1
+        });
+    }else{
+        carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
+    }
+    addCartToHTML();
+    addCartToMemory();
+}
+const addCartToMemory = () => {
+    localStorage.setItem('cart', JSON.stringify(carts));
+}
+const addCartToHTML = () => {
+    listCartHTML.innerHTML = '';
+    let totalQuantity = 0;
+    if(carts.length > 0){
+        carts.forEach(cart => {
+            totalQuantity = totalQuantity + cart.quantity;
+            let newCart = document.createElement('div');
+            newCart.classList.add('item');
+            newCart.dataset.id = cart.product_id;
+            let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
+            let info = listProducts[positionProduct];
+            newCart.innerHTML = `
+                <div class="image">
+                    <img src="${info.image}">
+                </div>
+                <div class="name">
+                    ${info.name}
+                </div>
+                <div class="totalPrice">
+                    $${info.price * cart.quantity}MXN
+                </div>
+                <div class="quantity">
+                    <span class="minus">-</span>
+                    <span>${cart.quantity}</span>
+                    <span class="plus">+</span>
+                </div>`;
+            listCartHTML.appendChild(newCart);
+        })
+    }
+    iconCartSpan.innerText = totalQuantity;
+}
+listCartHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
+        let product_id = positionClick.parentElement.parentElement.dataset.id;
+        let type = 'minus';
+        if(positionClick.classList.contains('plus')){
+            type = 'plus';
+        }
+        changeQuantity(product_id, type);
+    }
+})
+const changeQuantity = (product_id, type) => {
+    let positionItemInCart = carts.findIndex((value) => value.product_id == product_id);
+    if(positionItemInCart >= 0){
+        switch (type) {
+            case 'plus':
+                carts[positionItemInCart].quantity = carts[positionItemInCart].quantity + 1;
+                break;
+        
+            default:
+                let valueChange = carts[positionItemInCart].quantity - 1;
+                if(valueChange > 0){
+                    carts[positionItemInCart].quantity = valueChange;
+                }else{
+                    carts.splice(positionItemInCart, 1);
+                }
+                break;
+        }
+    }
+    addCartToMemory();
+    addCartToHTML();
+}
+const initApp = () => {
+    // leer informacion del JSON
+    fetch('productos.json')
+    .then(response => response.json())
+    .then(data => {
+        listProducts = data;
+        addDataToHTML();
+
+        // obtener la info de la memoria
+        if(localStorage.getItem('cart')){
+            carts = JSON.parse(localStorage.getItem('cart'));
+            addCartToHTML();
+        }
+    })
+}
+initApp();
