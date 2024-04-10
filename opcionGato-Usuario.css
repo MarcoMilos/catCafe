@@ -127,6 +127,7 @@ body.showCart .container{
   gap: 10px;
   text-align: center;
   align-items: center;
+  padding: 5px;
 }
 .listCart .quantity span{
   display: inline-block;   
