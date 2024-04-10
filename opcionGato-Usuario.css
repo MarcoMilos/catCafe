@@ -33,9 +33,12 @@ header{
   align-items: center;
   justify-content: space-between;
   padding: 50px;
+  color: whitesmoke;
+  text-shadow: 3px 3px 5px black;
 }
 header .icon-cart{
   position: relative;
+  color: whitesmoke;
 }
 header .icon-cart span{
   display: flex;
