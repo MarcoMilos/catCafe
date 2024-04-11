@@ -49,8 +49,8 @@ h1 {
   color: black;
   position: absolute;
   text-align: center;
-  top: 560px;
-  right: 1150px;
+  top: 510px;
+  right: 950px;
   width: 200px;
   font-size: 25px;
   font-family: 'Lilita One', sans-serif;
@@ -61,8 +61,8 @@ h1 {
   color: black;
   position: absolute;
   text-align: center;
-  top: 560px;
-  right: 400px;
+  top: 510px;
+  right: 250px;
   width: 200px;
   font-size: 25px;
   font-family: 'Lilita One', sans-serif;
@@ -73,8 +73,8 @@ h1 {
   color: whitesmoke;
   position: absolute;
   text-align: center;
-  top: 620px;
-  right: 1150px;
+  top: 570px;
+  right: 950px;
   width: 200px;
   font-size: 15px;
   font-family: 'Lilita One', sans-serif;
@@ -85,8 +85,8 @@ h1 {
   color: whitesmoke;
   position: absolute;
   text-align: center;
-  top: 600px;
-  right: 400px;
+  top: 550px;
+  right: 250px;
   width: 200px;
   font-size: 15px;
   font-family: 'Lilita One', sans-serif;
@@ -127,8 +127,8 @@ h1 {
 #opcionGato {
   background-image: url('images/opcionGato.png');
   position: absolute;
-  top: 350px;
-  right: 1150px;
+  top: 300px;
+  right: 950px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -137,8 +137,8 @@ h1 {
 #opcionCafe {
   background-image: url('images/opcionCafe.png');
   position: absolute;
-  top: 350px;
-  right: 400px;
+  top: 300px;
+  right: 250px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
