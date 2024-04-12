@@ -64,7 +64,7 @@
 
                         <div class="input-field">
                             <label>Ocupación *</label>
-                            <input type="email" placeholder="Introduce tu ocupación/estudio" required>
+                            <input type="text" placeholder="Introduce tu ocupación/estudio" required>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,6 @@
                 <div class="details ID">
                     <span class="title">Datos de Identidad</span>
                     <div class="fields">
-
                         <div class="input-field">
                             <label>Identificación *</label>
                             <input type="text" placeholder="Introduce tu CURP/DNI" required>
@@ -83,60 +82,204 @@
                             <input type="text" placeholder="Introduce tu Estado Civil" required>
                         </div>
                     </div>
+                </div>
 
-                    <button class="nextBtn">
-                        <span class="btnText">Siguiente</span>
+                <div class="details address">
+                    <span class="title">Detalles de Dirección</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Dirección *</label>
+                            <input type="text" placeholder="Introduce tu dirección" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nacionalidad *</label>
+                            <input type="text" placeholder="Introduce tu nacionalidad" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ciudad *</label>
+                            <input type="text" placeholder="Introduce tu ciudad" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estado *</label>
+                            <input type="text" placeholder="Introduce tu estado" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Municipio/Alcaldía *</label>
+                            <input type="text" placeholder="Introduce tu municipio/alcaldía" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Código Postal *</label>
+                            <input type="number" placeholder="Introduce tu código postal" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nextBtn">
+                    <span class="btnText">Siguiente</span>
+                    <i class="uil uil-navigator"></i>
+                </button>
+            </div>
+
+            <div class="form second">
+                <div class="details adoption">
+                    <span class="title">Cuestionario Adopción</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nombre del gatito *</label>
+                            <input type="text" placeholder="Introduce el nombre" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Por qué deseas adoptar? *</label>
+                            <input type="text" placeholder="Respuesta" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Tipo de vivienda *</label>
+                            <input type="text" placeholder="Departamento/Casa/Ático/etc." required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Rentas o es propia? *</label>
+                            <input type="text" placeholder="Respuesta" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Vives solo/a? *</label>
+                            <input type="text" placeholder="Si no, ¿tienes hijos? ¿de qué edades?" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Tienes más mascotas? *</label>
+                            <input type="number" placeholder="¿Cuántas?" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Qué harías si alguien es alérgico/a?</label>
+                            <input type="text" placeholder="Respuesta" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Cuánto tiempo estaría solo el gato? *</label>
+                            <input type="text" placeholder="minutos/horas" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Viajas a menudo? ¿Qué harías con el gato? *</label>
+                            <input type="text" placeholder="Respuesta" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Has adoptado previamente? *</label>
+                            <input type="text" placeholder="Repuesta" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>En caso de tener hijos a futuro, ¿sería un problema el gato? *</label>
+                            <input type="text" placeholder="Respuesta" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Qué tipo de gato buscas? *</label>
+                            <input type="text" placeholder="Respuesta" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Cuentas con los ingresos para mantenerlo? *</label>
+                            <input type="text" placeholder="Si se complica, ¿qué harías?" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>¿Qué buscas a la hora de elegir un gato? *</label>
+                            <input type="text" placeholder="Respuesta" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <div class="backBtn">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Volver</span>
+                    </div>
+                    
+                    <button class="submit">
+                        <span class="submit">Enviar</span>
                         <i class="uil uil-navigator"></i>
                     </button>
                 </div>
             </div>
         </form>
     </div>
+
+    <script src="adopcion.js"></script>
 </body>
 </html>
 
-<!-- <div class="container mt-5">
-    <form action="submit_application.php" method="post">
-        <section class="personal-info">
-            <label for="nombre" id="Nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <span class="error-message"></span>
 
-            <label for="edad" id="Edad">Edad:</label>
-            <input type="number" id="edad" name="edad" required>
-            <span class="error-message"></span>
+<!-- <div class="form third">
+    <div class="details adoption">
+        <span class="title">Cuestionario</span>
+        <div class="fields">
+            <div class="input-field">
+                <label>Nombre del gatito *</label>
+                <input type="text" placeholder="Introduce el nombre del gatito" required>
+            </div>
 
-            <label for="direccion" id="Direccion">Dirección:</label>
-            <input type="text" id="direccion" name="direccion" required>
-            <span class="error-message"></span>
+            <div class="input-field">
+                <label>¿Por qué deseas adoptar? *</label>
+                <input type="text" placeholder="Respuesta" required>
+            </div>
 
-            <label for="ocupacion" id="Ocupacion">Ocupación:</label>
-            <input type="text" id="ocupacion" name="ocupacion" required>
-            <span class="error-message"></span>
+            <div class="input-field">
+                <label>Tipo de vivienda *</label>
+                <input type="text" placeholder="Departamento/Casa/Ático/etc." required>
+            </div>
 
-            <label for="email" id="Email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <span class="error-message"></span>
+            <div class="input-field">
+                <label>¿Rentas o es propia? *</label>
+                <input type="text" placeholder="Respuesta" required>
+            </div>
 
-            <label for="telcasa-cel" id="Tel">Teléfono de casa/celular:</label>
-            <input type="tel" id="telcasa-cel" name="telcasa-cel" required>
-            <span class="error-message"></span>
-        </section>
+            <div class="input-field">
+                <label>¿Vives solo/a? *</label>
+                <input type="text" placeholder="Si no, ¿tienes hijos? ¿de qué edades?" required>
+            </div>
 
-        <section class="adoption-form">
-            <label for="nombre-gato" id="Nombre_Gato">Nombre del gato que desea adoptar:</label>
-            <input type="text" id="nombre-gato" name="nombre-gato">
-            <span class="error-message"></span>
+            <div class="input-field">
+                <label>¿Tienes más mascotas? *</label>
+                <input type="number" placeholder="¿Cuántas?" required>
+            </div>
 
-            <label id="Casa">¿Tiene casa/departamento propio?</label>
-            <label for="casa-propia-si" id="Si">Sí</label>
-            <input type="radio" id="casa-propia-si" name="casa-propia" value="si" required>
-            <span class="error-message"></span>
-            <label for="casa-propia-no" id="No">No</label>
-            <input type="radio" id="casa-propia-no" name="casa-propia" value="no" required>
-            <span class="error-message"></span>
-            <!-- Resto de preguntas -->
-        <!-- </section>
-        <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
-    </form>
-</div>  -->
+            <div class="input-field">
+                <label>¿Qué harías si alguién es alérgico/a? *</label>
+                <input type="text" placeholder="Respuesta" required>
+            </div>
+
+            <div class="input-field">
+                <label>¿Cuánto tiempo estaría solo el gato? *</label>
+                <input type="text" placeholder="minutos/horas" required>
+            </div>
+
+            <div class="input-field">
+                <label>¿Viajas a menudo? ¿Qué harías con el gato? *</label>
+                <input type="text" placeholder="Respuesta" required>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="backBtn">
+            <i class="uil uil-navigator"></i>
+            <span class="btnText">Volver</span>
+        </div>
+        
+        <button class="nextBtn">
+            <span class="submit">Enviar</span>
+            <i class="uil uil-navigator"></i>
+        </button>
+    </div>
+</div> -->
