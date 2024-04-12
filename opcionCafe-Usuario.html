@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Miaw CatCafe - Cafeteria Gatuna</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+        <!-- jQuery library (Libreria de Java)-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+        <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="opcionCafe-Usuario.css">
+
+    <link rel="icon" type="image/x-icon" href="logoMiaw.png">
+
+        <!-- Fuente "lilita One Static" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="bg-image"></div>
+        <img id="logo" src="images/logoMiaw.png" class="float-right">
+        <div class="w3-container" id="menu">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MENU</span></h5>
+                <div class="w3-row w3-center w3-card w3-padding" style="background-color: whitesmoke;">
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Comida');" id="myLink">
+                        <div class="w3-col s6 tablink" style="background-color: whitesmoke">Comida</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'Bebidas');">
+                        <div class="w3-col s6 tablink" style="background-color: whitesmoke;">Bebidas</div>
+                    </a>
+                </div>
+
+                <div id="Comida" class="w3-container menu w3-padding-48 w3-card" style="background-color: whitesmoke;">
+                    <h5>Canasta de Pan</h5>
+                    <p><pre class="w3-text-grey">Pan suave de la casa, recién horneado          $150 MXN</pre></p><br>
+
+                    <h5>Plato de Frutas</h5>
+                    <p><pre class="w3-text-grey">Sólo melón, sandía, piña, papaya o combinado   $110 MXN</pre></p><br>
+
+                    <h5>Huevos Divorciados (2 pzas)</h5>
+                    <p><pre class="w3-text-grey">Fritos o revueltos, bañados en salsa verde y<br>salsa roja; guarnición de chilaquiles con      $110 MXN<br>crema y queso fresco</pre></p><br>
+
+                    <h5>Omelette Lovely (3 pzas)</h5>
+                    <p><pre class="w3-text-grey">Relleno de espárragos, calabacitas y<br>espinacas; bañado en salsa verde; acompañado   $145 MXN<br>con ensalada fresca y frijoles de la olla.</pre></p><br>
+
+                    <h5>Sandwitch Cubano</h5>
+                    <p><pre class="w3-text-grey">Con pollo asado (100gr), jamón y<br>pechuga de pavo, queso panela, queso de        $220 MXN<br>cabra, lechuga, jitomate, aguacate y<br>frijoles frescos.</pre></p>
+                </div>
+
+                <div id="Bebidas" class="w3-container menu w3-padding-48 w3-card" style="background-color: whitesmoke;">
+                    <h5>Bebidas calientes</h5>
+                    <p><pre class="w3-text-grey">
+        Expresso 120ml          $39 MXN<br>
+        Café Latte 320ml        $52 MXN<br> 
+        Cappuccino 320ml        $52 MXN<br>
+        Chocolate 320ml         $55 MXN</pre></p><br>
+                    
+                    <h5>Jugos</h5>
+                    <p><pre class="w3-text-grey">
+        Naranjada Natural 240ml     $45 MXN<br>
+        Jugo de Toronja 240ml       $45 MXN<br>
+        Jugo de Zanahoria 240ml     $45 MXN<br>
+        Aeróbico 500ml              $59 MXN</pre></p>
+                </div>
+            </div>
+        </div>
+    <button id="btRegreso">Return</button>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+        <script src="opcionCafe-Usuario.js"></script>
+</body>
+</html>
