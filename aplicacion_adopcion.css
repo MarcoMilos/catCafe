@@ -64,7 +64,7 @@ body {
     overflow: hidden;
     position: relative;
         top: -400px;
-        right: -400px;
+        right: -200px;
 }
 
 #btRegreso:before {
@@ -121,16 +121,33 @@ body {
 .container form {
     position: relative;
     margin-top: 16px;
-    min-height: 490px;
+    min-height: 650px;
     background-color: #fff;
+    overflow: hidden;
 }
 
-.container form .details {
-    margin-top: 30px;
+.container form .form {
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
 }
 
-.container form .details.ID {
-    margin-top: 10px;
+.container form .form.second {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+
+form.secActive .form.second {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+form.secActive .form.first {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
 }
 
 .container form .title {
@@ -182,7 +199,7 @@ form .fields .input-field {
     color: #333;
 }
 
-.container form button {
+.container form button, .backBtn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,5 +210,56 @@ form .fields .input-field {
     outline: none;
     color: #fff;
     border-radius: 5px;
+    margin: 25px 0;
     background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.container form button,
+.container form .backBtn {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form button:hover {
+    background-color: #265df2;
+}
+
+form button i,
+form .backBtn i {
+    margin: 0 6px;
+}
+
+form .backBtn i {
+    transform: rotate(180deg);
+}
+
+form .buttons {
+    display: flex;
+    align-items: center;
+}
+
+form .buttons button, .backBtn {
+    margin-right: 14px;
+}
+
+@media (max-width: 750px) {
+    .container form {
+        overflow-y: scroll;
+    }
+    
+    .container form::-webkit-scrollbar {
+        display: none;
+    }
+
+    form .fields .input-field {
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field {
+        width: 100%;
+    }
 }
