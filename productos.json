@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Alimento Premium para gato adulto",
+        "price": 450,
+        "image": "images/comidaGato.png"
+    },
+    {
+        "id": 2,
+        "name": "Collar con GPS integrado",
+        "price": 1000,
+        "image": "images/collarGato.png"
+    },
+    {
+        "id": 3,
+        "name": "Ratón interactivo inteligente",
+        "price": 350,
+        "image": "images/ratonGato.png"
+    },
+    {
+        "id": 4,
+        "name": "Suéter de lana para gato",
+        "price": 380,
+        "image": "images/sueterGato.png"
+    }
+]
