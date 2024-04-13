@@ -15,45 +15,41 @@ body, html {
     text-align: center;
 }
 
-.header img {
-    width: 150px;
-}
-
-.header h1 {
-    color: #444;
-    font-size: 2.5rem;
-}
-
-.main-content {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    margin-top: 20px;
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 
-.total {
-    font-size: 1.5rem;
-    color: #555;
+.logo {
+    height: 50px; /* Adjust size as needed */
 }
 
-.total span {
-    color: #d14a76;
-    font-size: 1.8rem;
-}
-
-.btn-checkout {
+.btn-back, .btn-checkout {
     background-color: #d14a76;
     color: white;
-    font-size: 1.2rem;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 15px;
     transition: background-color 0.3s ease;
 }
 
-.btn-checkout:hover {
+.btn-back:hover, .btn-checkout:hover {
     background-color: #b23a5e;
+}
+
+.main-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cart-item {
+    text-align: left;
+    margin-left: 20px;
 }
