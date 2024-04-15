@@ -8,7 +8,7 @@ body, html {
 
   .bg-image {
     /* La imagen de fondo */
-    background-image: url('images/background.jpg');
+    background-image: url('/images/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,7 +125,7 @@ h1 {
 }
 
 #opcionGato {
-  background-image: url('images/opcionGato.png');
+  background-image: url('/images/opcionGato.png');
   position: absolute;
   top: 300px;
   right: 1150px;
@@ -135,7 +135,7 @@ h1 {
 }
 
 #opcionCafe {
-  background-image: url('images/opcionCafe.png');
+  background-image: url('/images/opcionCafe.png');
   position: absolute;
   top: 300px;
   right: 250px;

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    font-family: 'Lilita One', cursive;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.logo {
+    height: 50px; /* Adjust size as needed */
+}
+
+.btn-back, .btn-checkout {
+    background-color: #d14a76;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover, .btn-checkout:hover {
+    background-color: #b23a5e;
+}
+
+.main-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cart-item {
+    text-align: left;
+    margin-left: 20px;
+}
