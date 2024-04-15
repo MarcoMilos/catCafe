@@ -18,7 +18,7 @@ $(document).ready(function() {
                     alert(response.error); // Display error message if login fails
                 } else {
                     if (response.admin) {
-                        window.location.href = '/opcionCafe-Admin.html'; // Redirect admin to admin page
+                        window.location.href = '/opcionCafe-Usuario.html'; // Redirect admin to admin page
                     } else {
                         window.location.href = '/productos-Usuario.html'; // Redirect regular user to user page
                     }
