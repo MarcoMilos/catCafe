@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cat Cafe Login</title>
+    <title>Miaw Cat Cafe</title>
     <link rel="icon" type="image/x-icon" href="images/logoMiaw.png">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <label for="uname"><b>Usuario</b></label>
-        <input type="text" placeholder="Ingresa Usuario" name="uname" required>
+        <h1>Bienvenido a Miaw Cat Café!</h1>
+        <form id="loginForm">
+            <label for="uname"><b>Usuario</b></label>
+            <input type="text" placeholder="Ingresa Usuario" name="uname" required>
 
-        <label for="psw"><b>Constraseña</b></label>
-        <input type="password" placeholder="Ingresa Contraseña" name="psw" required>
+            <label for="psw"><b>Contraseña</b></label>
+            <input type="password" placeholder="Ingresa Contraseña" name="psw" required>
 
-        <button type="submit">Login</button>
+            <button type="submit">Login</button>
+        </form>
+        <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a>.</p>
     </div>
     <script src="index.js"></script>
 </body>

@@ -1,34 +1,36 @@
 $(document).ready(function() {
-    // Handle the form submission
-    $('body').on('click', 'button[type="submit"]', function(e) {
-        e.preventDefault();
+    $('#loginForm').on('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission
 
-        // Get the username and password from the form
-        var username = $('input[name="uname"]').val();
-        var password = $('input[name="psw"]').val();
+        var username = $('input[name="uname"]').val(); // Get username from form input
+        var password = $('input[name="psw"]').val(); // Get password from form input
 
-        // Send the username and password to the server
         $.ajax({
-            url: '/checkUser',  // The endpoint on your Flask server
-            method: 'POST',
+            url: 'https://plpcollado.pythonanywhere.com/login', // Target URL for the login request
+            method: 'POST', // Method type
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8", // Ensure proper header for POST
             data: {
                 username: username,
                 password: password
             },
             success: function(response) {
-                // If the user is an admin, redirect to the admin page
-                if (response.admin) {
-                    window.location.href = '/opcioCafe-Admin-html';
-                }
-                // If the user is not an admin, redirect to the user page
-                else {
-                    window.location.href = '/opcioCafe-Usuario-html';
+                if (response.error) {
+                    alert(response.error); // Display error message if login fails
+                } else {
+                    if (response.admin) {
+                        window.location.href = '/opcionCafe-Admin.html'; // Redirect admin to admin page
+                    } else {
+                        window.location.href = '/productos-Usuario.html'; // Redirect regular user to user page
+                    }
                 }
             },
-            error: function() {
-                // Handle any errors
-                alert('Error logging in. Please try again.');
+            error: function(xhr) {
+                // Handle errors
+                alert('Error logging in. Please try again. Status: ' + xhr.status);
             }
         });
     });
 });
+
+
+
